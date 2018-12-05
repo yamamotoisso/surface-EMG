@@ -1,0 +1,22 @@
+clear all;
+clc;
+close all;
+
+% perepoch = [11,12,13,8,5,6,15,6,5,6,3,5,6,15];
+% garepoch = [17,18,19,14,11,12,21,12,11,12,9,11,12,21];
+perepoch1 = [12,12,13,8,8,18,3,26,9,35,13,8,22,15];
+garepoch1 = [17,18,19,14,11,21,12,18,16,12,19,11,12,21];
+x = [3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+figure(1);
+plot(x,perepoch1,'-+k','LineWidth',2);
+hold on;
+plot(x,garepoch1,'--ob','LineWidth',3);
+% grid on;
+xlim([2,17]);
+set(gca,'XTick',x,'XTickLabel',{'3','4','5','6','7','8','9','10','11','12','13','14','15','16'});
+xlabel('{\fontname{STSong}隐含层节点数}');
+ylabel('{\fontname{STSong}迭代次数}');
+legend('{\fontname{STSong}均方误差}','{\fontname{STSong}最速梯度下降}');
+set(gca,'FontSize',20,'FontWeight','bold');
+set(gca,'linewidth',1,'Fontname','Times New Roman');
+box off;
